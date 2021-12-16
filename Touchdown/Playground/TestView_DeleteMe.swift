@@ -13,21 +13,40 @@ struct TestView_DeleteMe: View {
     
     var body: some View {
         
-        ZStack {
+        VStack {
             
-            Image(playerImage.image)
-                .resizable()
-                .scaledToFit()
-                .cornerRadius(20)
-                .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: (0.6)), radius: 3, x: 0, y: 0)
+            ZStack {
+                
+                Image(playerImage.image)
+                    .resizable()
+                    .scaledToFit()
+                    .cornerRadius(20)
+                    .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: (0.6)), radius: 3, x: 0, y: 0)
+                
+                Text("helmets & gloves".uppercased())
+                    .foregroundColor(Color.white)
+                    .fontWeight(.black)
+                    .font(.system(size: 60))
+                    .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: (0.6)), radius: 3, x: 0, y: 0)
+                
+            } //ZStack
             
-            Text("football".uppercased())
-                .foregroundColor(Color.white)
+            Text("football gear".uppercased())
+                .foregroundColor(Color.black)
                 .fontWeight(.black)
                 .font(.system(size: 60))
-                .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: (0.6)), radius: 3, x: 0, y: 0)
+                .multilineTextAlignment(.center)
             
-        } //ZStack
+            Spacer()
+            
+            Text("football gear © 2022".uppercased())
+                .font(.title3)
+                .fontWeight(.bold)
+            
+            Text("all rights reserved".uppercased())
+                .font(.footnote)
+            
+        } //VStack
         
     }
 }
@@ -35,7 +54,7 @@ struct TestView_DeleteMe: View {
 struct TestView_DeleteMe_Previews: PreviewProvider {
     static var previews: some View {
         TestView_DeleteMe(playerImage: players[3])
-            .previewLayout(.sizeThatFits)
-            .padding(30)
+            .previewDevice("iPhone 13")
+            .padding()
     }
 }
