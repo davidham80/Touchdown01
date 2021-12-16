@@ -26,7 +26,7 @@ struct TestView_DeleteMe: View {
                 Text("helmets & gloves".uppercased())
                     .foregroundColor(Color.white)
                     .fontWeight(.black)
-                    .font(.system(size: 60))
+                    .font(.largeTitle)
                     .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: (0.6)), radius: 3, x: 0, y: 0)
                 
             } //ZStack
@@ -34,8 +34,32 @@ struct TestView_DeleteMe: View {
             Text("football gear".uppercased())
                 .foregroundColor(Color.black)
                 .fontWeight(.black)
-                .font(.system(size: 60))
+                .font(.largeTitle)
                 .multilineTextAlignment(.center)
+            
+            Spacer()
+            
+            ZStack {
+                
+                RoundedRectangle(cornerRadius: 25)
+                    .frame(width: 200, height: 200, alignment: .center)
+
+                    
+//
+//                    VStack {
+//
+//                        Image(systemName: "play.fill")
+//                            .resizable()
+//                            .frame(width: 200, height: 200, alignment: .center)
+//                            .foregroundColor(Color.yellow)
+//
+//                        Text("shop now".uppercased())
+//                            .font(.system(size: 40))
+//                            .fontWeight(.bold)
+//
+//                    } //VStack
+                
+            } //ZStack
             
             Spacer()
             
@@ -54,7 +78,11 @@ struct TestView_DeleteMe: View {
 struct TestView_DeleteMe_Previews: PreviewProvider {
     static var previews: some View {
         TestView_DeleteMe(playerImage: players[3])
+        Group {
+            TestView_DeleteMe(playerImage: players[3])
             .previewDevice("iPhone 13")
+            .previewDevice("iPhone 8")
+        }
             .padding()
     }
 }
