@@ -32,6 +32,8 @@ struct ContentView: View {
                             //.frame(minHeight: 256)
                             .padding(.vertical, 20)
                         
+                        CategoryGridView()
+                        
                         FooterView()
                             .padding(.horizontal)
                         
