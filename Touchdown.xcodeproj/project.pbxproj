@@ -62,6 +62,7 @@
 		0D00E8C12763E10100B71BDB = {
 			isa = PBXGroup;
 			children = (
+				0D0584B8276A7BC400E45752 /* Playground */,
 				0D00E8CC2763E10100B71BDB /* Touchdown */,
 				0D00E8CB2763E10100B71BDB /* Products */,
 			);
@@ -78,7 +79,6 @@
 		0D00E8CC2763E10100B71BDB /* Touchdown */ = {
 			isa = PBXGroup;
 			children = (
-				0D0584B8276A7BC400E45752 /* Playground */,
 				0D2171522764030C008872B8 /* View */,
 				0D00E8E42763E1C800B71BDB /* Data */,
 				0D21715727640345008872B8 /* Model */,
