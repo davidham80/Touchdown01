@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
         
         ZStack {
@@ -46,6 +47,10 @@ struct ContentView: View {
                         }) //LazyVGrid
                             .padding(15)
                         
+                        TitleView(title: "Brands")
+                        
+                        BrandGridView()
+                        
                         FooterView()
                             .padding(.horizontal)
                         
@@ -60,6 +65,7 @@ struct ContentView: View {
         .ignoresSafeArea(.all, edges: .top)
         
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
